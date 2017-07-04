@@ -330,6 +330,7 @@ display: block;
 .contacts h3,
 .contacts a{
 	color:black;
+  font-size: 1.5em;
 }
 
 .contacts a{
