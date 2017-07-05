@@ -68,7 +68,7 @@ li {
 /* Pseudo-classes ------------------ */
 
 a:link {
-  color: rgba(174, 232, 226, 0.69);
+  color: rgba(174, 232, 226, 0.9);
   text-decoration: none;
 }
 
