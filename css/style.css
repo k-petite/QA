@@ -95,7 +95,7 @@ a:active {
 	padding-bottom: 20px;
 }
 
-.main-nav h1,
+.main-nav div,
 .main-nav ul{
 	display:flex;
 	flex-direction: column;
@@ -108,6 +108,10 @@ a:active {
 	font-size:2em;
 	font-family: 'Allura', cursive;
 	padding:10px;
+}
+
+.bottom{
+	display: none;
 }
 
 .main-nav ul{
@@ -374,16 +378,60 @@ footer a {
 
 
 @media (min-width: 768px) {
+
+  body {
+    background-size: 100%;
+  }
+
+  .main-nav {
+  	display:flex;
+  	flex-direction: column;
+  	justify-content: center;
+  }
+
+  .main-nav div,
+  .main-nav ul{
+  	display:flex;
+  	flex-direction: row;
+  	justify-content: center;
+  	margin:0;
+  	text-align:center;
+  }
+
+
+
+  .main-nav h1{
+  	font-size:2em;
+  	font-family: 'Allura', cursive;
+  	padding:10px;
+    margin: 0;
+  }
+
+  .main-nav h3{
+    padding:10px 10px 0 10px;
+    margin: 0;
+  }
+
+  .top{
+  	display: none;
+  }
+
+  .bottom{
+    display: block;
+  }
+
   .primary-content,
   .secondary-content {
     width: 100%;
-    padding: 20px;
     border-top: none;
   }
-  .main-header {
-    max-height: 380px;
-    padding: 50px 25px 0;
+
+
+  .audits{
+  	margin:0;
+    padding: 10% 12%;
   }
+
   .title {
     font-size: 1.3rem;
     border: none;
@@ -410,12 +458,45 @@ footer a {
 
 
 @media (min-width: 1024px) {
+  body {
+    background-size: 100%;
+  }
+
+  .main-nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px 0;
+  }
+
+  .main-header h3 {
+    margin-top: 30px;
+  }
+
+
   .primary-content,
   .secondary-content {
     width: 90%;
   }
+
+  .audits {
+    margin: 5em 0 7em;
+  }
+
+  .audits ul {
+    margin-top: 2em;
+  }
+
   .consulting {
     padding: 10% 12%;
-    margin: 50px 0 20px;
+    margin: 7em 0;
+  }
+
+  .background {
+    margin: 7em 0;
+  }
+
+  .contacts {
+    margin: 7em 0 0;
   }
 }
