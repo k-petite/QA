@@ -110,6 +110,10 @@ a:active {
 	padding:10px;
 }
 
+svg{
+  display: none;
+}
+
 .bottom{
 	display: none;
 }
@@ -460,6 +464,7 @@ footer a {
 @media (min-width: 1024px) {
   body {
     background-size: 100%;
+    background-position: 0 1px;
   }
 
   .main-nav {
@@ -468,6 +473,64 @@ footer a {
     justify-content: space-between;
     padding: 20px 20px 0;
   }
+
+  .main-nav h1{
+  	display: none;
+  }
+
+  svg{
+    display: block;
+    padding: 10px 0;
+  }
+
+  @keyframes turn {
+  	0% {
+  		transform: rotate(0) scale(1);
+  	}
+
+  	60% {
+  		transform: rotate(-10deg) scale(1.2);
+  		fill:rgba(247, 240, 36, 1);
+  		opacity:1;
+  	}
+
+  	100% {
+  		transform: rotate(0) scale(1);
+  	}
+
+  }
+
+  @keyframes offset {
+    70% {
+      stroke-dashoffset:10;
+      stroke-opacity:0;
+    }
+  	50% {
+  		stroke-opacity:0.2;
+  	}
+    0% {
+      stroke-opacity:1.0;
+    }
+  }
+/* --------------------------
+  SVG Styles
+--------------------------- */
+
+svg * {
+	transform-origin: 50% 50%;
+}
+
+
+.e-letter{
+	stroke:#C0C0C0;
+	stroke-width:5;
+	stroke-dasharray:145;
+	stroke-dashoffset:145;
+
+	animation: offset 5s .7s linear forwards;
+}
+	/*animation: turn .9s .7s ease-out forwards;*/
+
 
   .main-header h3 {
     margin-top: 30px;
@@ -484,7 +547,7 @@ footer a {
   }
 
   .audits ul {
-    margin-top: 2em;
+    margin-top: 4em;
   }
 
   .consulting {
