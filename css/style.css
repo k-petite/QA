@@ -483,14 +483,34 @@ footer a {
     padding: 10px 0;
   }
 
+  @keyframes raise {
+  	0% {
+  		transform: translate(-50%, -50%) scale(0);
+  	}
+
+
+  	60% {
+  		transform: translate(0%, -10%) scale(1);
+  	}
+
+  	80% {
+  		transform: translate(0%, 10%) scale(1);
+  	}
+
+  	100% {
+  		transform: translate(0) scale(1);
+  	}
+
+  }
+
   @keyframes turn {
   	0% {
   		transform: rotate(0) scale(1);
   	}
 
   	60% {
-  		transform: rotate(-10deg) scale(1.2);
-  		fill:rgba(247, 240, 36, 1);
+  		transform: rotate(-1deg) scale(1.2);
+  		/*fill:rgba(247, 240, 36, 1);*/
   		opacity:1;
   	}
 
@@ -503,13 +523,13 @@ footer a {
   @keyframes offset {
     70% {
       stroke-dashoffset:10;
-      stroke-opacity:0;
+      stroke-opacity:.8;
     }
   	50% {
-  		stroke-opacity:0.2;
+  		stroke-opacity:.5;
   	}
     0% {
-      stroke-opacity:1.0;
+      stroke-opacity:.8;
     }
   }
 /* --------------------------
@@ -522,14 +542,17 @@ svg * {
 
 
 .e-letter{
-	stroke:#C0C0C0;
-	stroke-width:5;
+	/*stroke:#C0C0C0;
+	stroke-width:4;
 	stroke-dasharray:145;
-	stroke-dashoffset:145;
+	stroke-dashoffset:145;*/
 
-	animation: offset 5s .7s linear forwards;
+	/*animation: offset 1s .7s linear forwards;*/
+  animation: raise .5s .5s ease-out backwards, turn .5s .7s ease-out forwards;
+
 }
 	/*animation: turn .9s .7s ease-out forwards;*/
+
 
 
   .main-header h3 {
