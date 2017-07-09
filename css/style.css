@@ -467,6 +467,8 @@ footer a {
   }
 }
 
+/* Animation keyframes */
+
 @-webkit-keyframes raise {
   0% {
     -webkit-transform: translate(-50%, -50%) scale(0);
@@ -547,7 +549,7 @@ footer a {
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1370px) {
   body {
     background-size: 110%;
     background-position: 0 0px;
