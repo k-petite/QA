@@ -467,6 +467,85 @@ footer a {
   }
 }
 
+@-webkit-keyframes raise {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+  }
+
+  60% {
+    -webkit-transform: translate(0%, -10%) scale(1);
+  }
+
+  80% {
+    -webkit-transform: translate(0%, 10%) scale(1);
+  }
+
+  100% {
+    -webkit-transform: translate(0) scale(1);
+  }
+
+}
+
+@keyframes raise {
+  0% {
+    -ms-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+
+  60% {
+    -ms-transform: translate(0%, -10%) scale(1);
+    transform: translate(0%, -10%) scale(1);
+  }
+
+  80% {
+    -ms-transform: translate(0%, 10%) scale(1);
+    transform: translate(0%, 10%) scale(1);
+  }
+
+  100% {
+    -ms-transform: translate(0) scale(1);
+    transform: translate(0) scale(1);
+  }
+
+}
+
+
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotate(0) scale(1);
+  }
+
+  60% {
+    -webkit-transform: rotate(-1deg) scale(1.2);
+    opacity:1;
+  }
+
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+  }
+
+}
+
+@keyframes turn {
+  0% {
+    -ms-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+  }
+
+  60% {
+    -ms-transform: rotate(-1deg) scale(1.2);
+    transform: rotate(-1deg) scale(1.2);
+    opacity:1;
+  }
+
+  100% {
+    -ms-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+  }
+
+}
+
 
 @media (min-width: 1024px) {
   body {
@@ -494,132 +573,54 @@ footer a {
     padding: 10px 0;
   }
 
-  @-webkit-keyframes raise {
-  	0% {
-      -webkit-transform: translate(-50%, -50%) scale(0);
-  	}
 
-  	60% {
-      -webkit-transform: translate(0%, -10%) scale(1);
-  	}
+  /* --------------------------
+    SVG Styles
+  --------------------------- */
 
-  	80% {
-      -webkit-transform: translate(0%, 10%) scale(1);
-  	}
+    svg * {
+    	-ms-transform-origin: 50% 50%;
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
 
-  	100% {
-      -webkit-transform: translate(0) scale(1);
-  	}
-
-  }
-
-  @keyframes raise {
-  	0% {
-      -ms-transform: translate(-50%, -50%) scale(0);
-  		transform: translate(-50%, -50%) scale(0);
-  	}
+    }
 
 
-  	60% {
-  		-ms-transform: translate(0%, -10%) scale(1);
-      transform: translate(0%, -10%) scale(1);
-  	}
-
-  	80% {
-  		-ms-transform: translate(0%, 10%) scale(1);
-      transform: translate(0%, 10%) scale(1);
-  	}
-
-  	100% {
-  		-ms-transform: translate(0) scale(1);
-      transform: translate(0) scale(1);
-  	}
-
-  }
+    .e-letter{
+    -ms-animation: raise .5s .5s ease-out backwards, turn .5s .7s ease-out forwards;
+    -webkit-animation: raise .5s .5s ease-out backwards, turn .5s .7s ease-out forwards;
+    animation: raise .5s .5s ease-out backwards, turn .5s .7s ease-out forwards;
+    }
 
 
-  @-webkit-keyframes turn {
-  	0% {
-      -webkit-transform: rotate(0) scale(1);
-  	}
-
-  	60% {
-      -webkit-transform: rotate(-1deg) scale(1.2);
-  		opacity:1;
-  	}
-
-  	100% {
-      -webkit-transform: rotate(0) scale(1);
-  	}
-
-  }
-
-  @keyframes turn {
-  	0% {
-  		-ms-transform: rotate(0) scale(1);
-      transform: rotate(0) scale(1);
-  	}
-
-  	60% {
-      -ms-transform: rotate(-1deg) scale(1.2);
-  		transform: rotate(-1deg) scale(1.2);
-  		opacity:1;
-  	}
-
-  	100% {
-  		-ms-transform: rotate(0) scale(1);
-      transform: rotate(0) scale(1);
-  	}
-
-  }
-
-/* --------------------------
-  SVG Styles
---------------------------- */
-
-  svg * {
-  	-ms-transform-origin: 50% 50%;
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-
-  }
+    .main-header h3 {
+      margin-top: 30px;
+    }
 
 
-  .e-letter{
-  -ms-animation: raise .5s .5s ease-out backwards, turn .5s .7s ease-out forwards;
-  -webkit-animation: raise .5s .5s ease-out backwards, turn .5s .7s ease-out forwards;
-  animation: raise .5s .5s ease-out backwards, turn .5s .7s ease-out forwards;
-  }
+    .primary-content,
+    .secondary-content {
+      width: 90%;
+    }
 
+    .audits {
+      margin: 5em 0 7em;
+    }
 
-  .main-header h3 {
-    margin-top: 30px;
-  }
+    .audits ul {
+      margin-top: 4em;
+    }
 
+    .consulting {
+      padding: 10% 12%;
+      margin: 7em 0;
+    }
 
-  .primary-content,
-  .secondary-content {
-    width: 90%;
-  }
+    .background {
+      margin: 7em 0;
+    }
 
-  .audits {
-    margin: 5em 0 7em;
-  }
-
-  .audits ul {
-    margin-top: 4em;
-  }
-
-  .consulting {
-    padding: 10% 12%;
-    margin: 7em 0;
-  }
-
-  .background {
-    margin: 7em 0;
-  }
-
-  .contacts {
-    margin: 7em 0 0;
-  }
-} /* Media 1024px */
+    .contacts {
+      margin: 7em 0 0;
+    }
+  } /* Media 1024px */
