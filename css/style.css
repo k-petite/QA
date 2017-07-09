@@ -577,7 +577,7 @@ footer a {
     }
 
     .audits {
-      margin: 5em 0 7em;
+      margin: 4em 0 7em;
     }
 
     .audits ul {
@@ -626,4 +626,4 @@ footer a {
       -webkit-animation: raise .5s .5s ease-out backwards, turn .5s .7s ease-out forwards;
       animation: raise .5s .5s ease-out backwards, turn .5s .7s ease-out forwards;
       }
-  }    
+  }
