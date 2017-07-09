@@ -485,37 +485,51 @@ footer a {
 
   @keyframes raise {
   	0% {
+      -ms-transform: translate(-50%, -50%) scale(0);
+      -webkit-transform: translate(-50%, -50%) scale(0);
   		transform: translate(-50%, -50%) scale(0);
   	}
 
 
   	60% {
-  		transform: translate(0%, -10%) scale(1);
+  		-ms-transform: translate(0%, -10%) scale(1);
+      -webkit-transform: translate(0%, -10%) scale(1);
+      transform: translate(0%, -10%) scale(1);
   	}
 
   	80% {
-  		transform: translate(0%, 10%) scale(1);
+  		-ms-transform: translate(0%, 10%) scale(1);
+      -webkit-transform: translate(0%, 10%) scale(1);
+      transform: translate(0%, 10%) scale(1);
   	}
 
   	100% {
-  		transform: translate(0) scale(1);
+  		-ms-transform: translate(0) scale(1);
+      -webkit-transform: translate(0) scale(1);
+      transform: translate(0) scale(1);
   	}
 
   }
 
   @keyframes turn {
   	0% {
-  		transform: rotate(0) scale(1);
+  		-ms-transform: rotate(0) scale(1);
+      -webkit-transform: rotate(0) scale(1);
+      transform: rotate(0) scale(1);
   	}
 
   	60% {
+      -ms-transform: rotate(-1deg) scale(1.2);
+      -webkit-transform: rotate(-1deg) scale(1.2);
   		transform: rotate(-1deg) scale(1.2);
   		/*fill:rgba(247, 240, 36, 1);*/
   		opacity:1;
   	}
 
   	100% {
-  		transform: rotate(0) scale(1);
+  		-ms-transform: rotate(0) scale(1);
+      -webkit-transform: rotate(0) scale(1);
+      transform: rotate(0) scale(1);
   	}
 
   }
@@ -537,7 +551,10 @@ footer a {
 --------------------------- */
 
 svg * {
-	transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
 }
 
 
